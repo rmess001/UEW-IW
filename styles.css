@@ -9,12 +9,13 @@ header {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   text-align: center;
   font-size: 30px;
-  width: 160px; /* Set the width of the sidebar */
+  width: 180px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: rgb(40, 40, 80);
+  color: rgb(255, 255, 255);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
@@ -22,7 +23,7 @@ header {
 /* The sidebar menu */
 .nav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 160px; /* Set the width of the sidebar */
+  width: 180px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -34,10 +35,13 @@ header {
 
 /* The navigation menu links */
 .nav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
+  width: 164px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  padding: 6px 8px 6px 8px;
+  text-align: center;
   font-size: 25px;
   color: rgb(255, 255, 255);
+  background-color: rgb(80, 80, 160);
   display: block;
 }
 
