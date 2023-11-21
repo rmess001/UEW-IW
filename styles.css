@@ -6,10 +6,10 @@ body {
 }
 
 header {
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-family: "Arial";
   text-align: center;
-  font-size: 30px;
-  width: 180px; /* Set the width of the sidebar */
+  font-size: 50px;
+  width: 240px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
@@ -17,26 +17,26 @@ header {
   background-color: rgb(40, 40, 80);
   color: rgb(255, 255, 255);
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 /* The sidebar menu */
 .nav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 180px; /* Set the width of the sidebar */
+  width: 240px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: rgb(40, 40, 80);
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 100px;
+  padding-top: 130px;
 }
 
 /* The navigation menu links */
 .nav a {
-  width: 164px;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  width: 228px;
+  font-family: "Arial";
   padding: 6px 8px 6px 8px;
   text-align: center;
   font-size: 25px;
@@ -49,4 +49,51 @@ header {
 .nav a:hover {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255, 0.5);
+}
+
+footer {
+  background: rgb(80, 80, 160);
+  height: 100px;
+  padding: 1em 0 1em 0;
+	margin-top: auto;
+	position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+#control-bar {
+  align-items: center;
+}
+
+#timeline{
+	width: 600px;
+	height: 20px;
+	border-radius: 15px;
+	background: rgba(0,0,0,.3);
+  bottom: 0;
+  margin-top: 5px; 
+  margin-right: auto; 
+  margin-left: auto;
+  
+}
+
+#playhead{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: rgba(0, 0, 0,1);
+  margin-left: 0; /* 0 through 580 */
+}
+
+#playpause{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin: auto, auto, auto, auto;
+	background: rgba(0, 0, 0,1);
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
