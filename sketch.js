@@ -80,3 +80,79 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }    
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//METADATA MP3
+const filePath = 'music/oms.mp3';  // Replace with the actual URL of your MP3 file
+
+
+fetch(filePath)
+  .then(response => response.arrayBuffer())
+  .then(buffer => {
+    const metadata = readID3Tags(buffer);
+
+    if (metadata) {
+      console.log('Title:', metadata.title || 'N/A');
+      console.log('Authors:', metadata.authors || 'N/A');
+    } else {
+      console.log('Error reading metadata.');
+    }
+  })
+  .catch(error => {
+    console.error('Error fetching the file:', error.message);
+  });
+
+function readID3Tags(buffer) {
+  const id3Header = new TextDecoder().decode(new Uint8Array(buffer.slice(0, 3)));
+
+  if (id3Header === 'ID3') {
+    const version = new Uint8Array(buffer.slice(3, 4))[0];
+    const majorVersion = new Uint8Array(buffer.slice(4, 5))[0];
+    const minorVersion = new Uint8Array(buffer.slice(5, 6))[0];
+    const flags = new Uint8Array(buffer.slice(6, 7))[0];
+
+    let offset = 10;
+    const result = {};
+
+    while (offset < buffer.byteLength) {
+      const frameID = new TextDecoder().decode(new Uint8Array(buffer.slice(offset, offset + 4)));
+      const frameSize = new DataView(buffer).getUint32(offset + 4);
+      const frameFlags = new DataView(buffer).getUint16(offset + 8);
+
+      if (frameID === 'TIT2') {
+        const encoding = new Uint8Array(buffer.slice(offset + 10, offset + 11))[0];
+        const title = new TextDecoder().decode(new Uint8Array(buffer.slice(offset + 11, offset + frameSize)));
+        result.title = title;
+      } else if (frameID === 'TPE1') {
+        const encoding = new Uint8Array(buffer.slice(offset + 10, offset + 11))[0];
+        const authors = new TextDecoder().decode(new Uint8Array(buffer.slice(offset + 11, offset + frameSize)));
+        result.authors = authors;
+      }
+
+      offset += 10 + frameSize;
+    }
+
+    return result;
+  } else {
+    console.log('File does not have an ID3 tag.');
+    return null;
+  }
+}
