@@ -1,9 +1,8 @@
 //AUDIO VARIABLES
-var songPlaying = 'HW.mp3';
-var audio = new Audio('music/' + songPlaying);
-var playheadTime = 0;
-var songDuration;
-
+var songPlaying = 'oms.mp3'; //current song loaded
+var audio = new Audio('music/' + songPlaying); //current song loaded
+var playheadTime = 0; //playhead value relative to length of song
+var songDuration; //duration of current song
 
 document.addEventListener('DOMContentLoaded', function() {
     audio.addEventListener('loadeddata', function() { //get song duration
@@ -11,16 +10,21 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
     
-    audio.addEventListener('timeupdate', function() { // Update the current playback position continuously
-        console.log(playheadTime);
+    audio.addEventListener('timeupdate', function() { // update the current playback position continuously    
+        if (playheadPressed == false) {
+            playheadTime = audio.currentTime;
+            playheadPosition = (audio.currentTime*580/songDuration).toFixed(6);
+            playhead.style.marginLeft = (audio.currentTime*580/songDuration).toFixed(6);}
+
+            document.getElementById("timestamp").textContent = audio.currentTime.toFixed(2) + " | " + audio.duration.toFixed(2); //update timestamp
+            if (audio.currentTime >= audio.duration) {play = false; console.log("OVER");} //turn play variable off when song has ended
       });
       
   });
-  
 audio.load();
 
 //PLAYHEAD
-var playheadPosition = 0; //0 through 580
+var playheadPosition = 0; //0 through 580 (value for the css)
 var playheadPressed = false;
 document.addEventListener('DOMContentLoaded', function() {
     var playhead = document.getElementById('playhead');
@@ -33,14 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
             zero = mouseX - playheadPosition;
             playheadPressed = true;
         });
+        addEventListener('mouseup', function() {
+            console.log('Mouse released!');
+            // Add your code here to handle the mouse release event
+            if (playheadPressed == true) {audio.currentTime = playheadTime; playheadPressed = false;}
+            
+        });
     }
-
-    addEventListener('mouseup', function() {
-        console.log('Mouse released on the playhead!');
-        // Add your code here to handle the mouse release event
-        playheadPressed = false;
-        audio.currentTime = playheadTime; 
-    });
 });
 
 
@@ -57,8 +60,8 @@ function updateCoordinates(event) {
     if (playheadPressed == true) {
         playheadPosition = mouseX - zero;
         if (playheadPosition < 581 && playheadPosition > -1) {playhead.style.marginLeft = playheadPosition;} //change css value
-        else if (playheadPosition < 0) {playhead.style.marginLeft = 0;} else if (playheadPosition > 580) {playhead.style.marginLeft = 580;}
-        playheadTime = playheadPosition/(580/songDuration);
+        else if (playheadPosition < 0) {playhead.style.marginLeft = 0; playheadPosition = 0;} else if (playheadPosition > 580) {playhead.style.marginLeft = 580; playheadPosition = 580;}
+        playheadTime = (playheadPosition/(580/songDuration)).toFixed(6);
     } 
   }
 
@@ -75,5 +78,5 @@ document.addEventListener('DOMContentLoaded', function() {
             if (play == true) {play = false; audio.pause();}
             else {play = true; audio.play();}
         });
-    }
+    }    
 });
