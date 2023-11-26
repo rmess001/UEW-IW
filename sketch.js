@@ -1,5 +1,5 @@
 //AUDIO VARIABLES
-var songPlaying = 'oms.mp3'; //current song loaded
+var songPlaying = 'OMS.mp3'; //current song loaded
 var audio = new Audio('music/' + songPlaying); //current song loaded
 var playheadTime = 0; //playhead value relative to length of song
 var songDuration; //duration of current song
