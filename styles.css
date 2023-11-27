@@ -35,7 +35,11 @@ header {
 
 /* The navigation menu links */
 .nav a {
-  width: 228px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  width: 87.5%;
   font-family: "Arial";
   padding: 6px 8px 6px 8px;
   text-align: center;
@@ -85,6 +89,7 @@ footer {
 	margin-top: 1px;
 	background: rgba(0, 0, 0,1);
   margin-left: 0; /* 0 through 580 */
+  cursor: pointer;
 }
 
 #playpause{
@@ -96,10 +101,33 @@ footer {
   margin-top: 15px;
   margin-right: auto;
   margin-left: auto;
+  cursor: pointer;
 }
 
 #timestamp{
   text-align: center;
   font-family: "Arial";
   font-size: 16px;
+}
+
+#volumeBar{
+  width: 10px;
+	height: 110px;
+	border-radius: 15px;
+	background: rgba(0,0,0,.3);
+  margin-top: -40px;
+  margin-right: -200px; 
+  margin-left: auto;
+}
+
+#volumehead{
+  position:inherit;
+	width: 10px;
+	height: 10px;
+	border-radius: 15px;
+	background: rgba(0,0,0);
+  margin-top: -60px;
+  margin-right: -200px; 
+  margin-left: auto;
+  cursor: pointer;
 }
