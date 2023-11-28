@@ -1,0 +1,77 @@
+<html> 
+    <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <title>Melody Muse</title>
+    <header> Melody Muse </header>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forum.html">Forum</a></li>
+              </ul>
+        </div>
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Forum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #forum-container {
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="forum-container">
+    <h1>Forum</h1>
+
+    <form onsubmit="postMessage(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" required></textarea>
+        <br>
+        <input type="submit" value="Post Message">
+    </form>
+
+    <!-- Display posted messages -->
+    <h2>Messages</h2>
+    <div id="messages"></div>
+</div>
+
+<script>
+    function postMessage(event) {
+        event.preventDefault();
+
+        var username = document.getElementById("username").value;
+        var message = document.getElementById("message").value;
+
+        var messagesContainer = document.getElementById("messages");
+        var messageElement = document.createElement("p");
+        messageElement.innerHTML = "<strong>" + escapeHTML(username) + ":</strong> " + escapeHTML(message);
+        messagesContainer.appendChild(messageElement);
+
+        // Clear the form
+        document.getElementById("username").value = "";
+        document.getElementById("message").value = "";
+    }
+
+    function escapeHTML(str) {
+        return str.replace(/&/g, "&amp;")
+                  .replace(/</g, "&lt;")
+                  .replace(/>/g, "&gt;")
+                  .replace(/"/g, "&quot;")
+                  .replace(/'/g, "&#39;");
+    }
+</script> 
+
+
+</body>
+
+</html>
