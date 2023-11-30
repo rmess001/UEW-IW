@@ -23,6 +23,69 @@ footer {
     margin: 12px;
     position: absolute;
     bottom: 0;
+    display: flex;
+}
+
+#playing{
+width: 25% ;
+}
+
+#soundbar{
+    width: 75%;
+    text-align: center;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lskip {margin-top: 20px; margin-right: 10%; width: 40px; height: 40px;}
+#rskip {margin-top: 20px; margin-left: 10%; width: 40px; height: 40px;}
+#playbutton {margin-top: 20px;  width: 60px; height: 60px;}
+
+#timeline{
+    position: absolute;
+    background-color: white;
+    height: 10px;
+    width: 60%;
+    border-radius: 10px;
+    bottom: 20px;
+    left: 62.5%; /* Adjust the left position to 40% to center within the right 60% */
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+#playhead{
+    height: 16px;
+    width: 16px;
+    background-color: rgb(233, 142, 142);
+    border-radius: 16px;
+    margin-left: 45%;
+}
+
+#timeelapse{color: white; position: absolute; font-family: "Arial Rounded MT Bold"; left: -50px;}
+#timeremain{color: white; position: absolute; font-family: "Arial Rounded MT Bold"; right: -50px;}
+
+#playing{
+    display: flex;
+    align-items: center;
+}
+
+#songinfo{
+    color: white;
+    font-family: "Arial Rounded MT Bold";  
+    font-size: 16px;
+    margin-left: calc(10% + 30px);
+}
+
+#coverart{
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-left: 10%;
 }
 
 /*Side Navigation Bar*/
@@ -35,15 +98,15 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    text-align: center; /* This centers the image horizontally */
+    text-align: center;
    }
 
 #sidebar img {
     padding-top: 20px;
-    max-width: 75%; /* This ensures the image scales down if it is larger than the sidebar */
-    max-height: 75%; /* This ensures the image scales down if it is larger than the sidebar */
-    width: auto; /* This allows the image to scale down proportionally */
-    height: auto; /* This allows the image to scale down proportionally */
+    max-width: 75%;
+    max-height: 75%;
+    width: auto;
+    height: auto;
 }
 
 /*Explore Button*/
