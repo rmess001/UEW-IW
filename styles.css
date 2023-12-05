@@ -299,3 +299,69 @@ input[type="submit"]:hover
     font-family: "Arial Rounded MT Bold";
 }
 
+/* Profile CSS */
+
+h1
+{
+    margin-top: calc(80px + 48px);
+    margin-left: 230px;
+    font-family: "Arial Rounded MT Bold";
+    position: absolute;
+}
+
+h2
+{
+    margin-top: calc(80px + 40px);
+    margin-left: 500px;
+    font-family: "Arial Rounded MT Bold";
+    position: relative;
+}
+
+#profile-picture
+{
+    max-width: 160px;
+    max-height: 160px;
+    margin-top: calc(2px + 40px);
+    margin-left: 260px;
+    border-radius: 24px;
+    position: absolute;
+    z-index: 1;
+}
+
+p1
+{
+    color:white;
+    position: absolute;
+    z-index: 3;
+    top: 400px;
+    margin-left: 240px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+#profile-container 
+{
+    position: absolute;
+    background-color:rgb(73,11,11);
+    color: white;
+    border-radius: 4px;
+    width: 230;
+    height: 442;
+    margin-left: 230px;
+    margin-bottom: calc(442px- 140px);
+    border-radius: 24px;
+    overflow-y: auto
+}
+
+#playlist-container 
+{
+    margin-bottom: 10px;
+    background-color:rgb(73,11,11);
+    border-radius: 4px;
+    width: 930;
+    height: 442;
+    margin-left: 500px;
+    margin-top: 0px;
+    border-radius: 24px;
+    overflow-y: auto
+}
+
