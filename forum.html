@@ -15,6 +15,62 @@
                 <a href=""></a><div id="signup">Sign Up</div></a>
             </div>
             <!-- Your website content goes here -->
+             <body>
+                <div id="forum-container">
+                
+                    <form onsubmit="postMessage(event)">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required>
+                        <br>
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="4" required></textarea>
+                        <br>
+                        <input type="submit" value="Post Message">
+                    </form>
+                    <h2>Messages</h2>
+                
+                    <!-- Display posted messages -->
+                </div>
+                <div id="messages-container">
+                    <p class="default-message"></pclass><strong>Hana &#127775;:</strong> Hi, welcome to the forum!</p>
+                    <div id="messages"></div>
+                </div>
+                
+                <script>
+                    function postMessage(event) 
+                    {
+                        event.preventDefault();
+                
+                        var username = document.getElementById("username").value;
+                        var message = document.getElementById("message").value;
+                
+                        var messagesContainer = document.getElementById("messages");
+                        var messageElement = document.createElement("p");
+                        messageElement.innerHTML = "<strong>" + escapeHTML(username) + ":</strong> " + escapeHTML(message);
+                        messagesContainer.appendChild(messageElement);
+                
+                        // Clear the form
+                        document.getElementById("username").value = "";
+                        document.getElementById("message").value = "";
+                    }
+                    function escapeHTML(str) 
+                    {
+                        return str.replace(/&/g, "&amp;")
+                                  .replace(/</g, "&lt;")
+                                  .replace(/>/g, "&gt;")
+                                  .replace(/"/g, "&quot;")
+                                  .replace(/'/g, "&#39;");
+                    }
+                </script> 
+                </body>
+        </div>
+        <footer>
+        </footer>
+        <div id="timeline">
+            <div id="playline"></div>
+            <div id="playhead"></div>
+        </div>
+    </body>
         </div>
         <footer>
         </footer>
