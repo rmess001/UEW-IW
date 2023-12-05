@@ -193,3 +193,109 @@ width: 25% ;
     font-size: 20px;
     outline: none;
 }
+
+/* Forum CSS */
+
+h2
+{
+    color:rgb(74, 11, 11);
+    margin-left:7px;
+}
+
+#forum-container 
+{
+    position: absolute;
+    width: calc(100% - 248px);
+    margin-top: calc(80px + 48px);
+    margin-left: 224px;
+    border-radius: 24px;
+    font-family: "Arial Rounded MT Bold";
+
+}
+
+#input-section 
+{
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#messages-section 
+{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form 
+{
+    margin-top: 10px;
+}
+
+label 
+{
+    font-family: "Arial Rounded MT Bold";
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea 
+{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] 
+{
+    background-color: rgb(73,11,11);
+    font-family: "Arial Rounded MT Bold";
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover 
+{
+    background-color: rgb(128, 11, 11);
+}
+
+#messages-container 
+{
+    margin-bottom: 10px;
+    background-color:rgb(73,11,11);
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+    width: calc(100% - 248px);
+    height: calc(100% - 580px);
+    max-height: calc(100% - 580px);
+    margin-top: calc(80px + 330px);
+    margin-left: 224px;
+    border-radius: 24px;
+    overflow-y: auto
+}
+
+#messages p {
+    margin-bottom: 10px;
+}
+
+.default-message {
+    font-family: "Arial Rounded MT Bold";
+    margin-left: 10px;
+}
+
+#messages
+{
+    color: white;
+    margin-left: 10px;
+    font-family: "Arial Rounded MT Bold";
+}
+
