@@ -14,12 +14,6 @@
                 <a href="/profile.html"><div id="pr">Profile</div></a>
                 <a href=""></a><div id="signup">Sign Up</div></a>
             </div>
-            <!-- Your website content goes here -->
-    <head>
-    </head>
-    <link rel="stylesheet" type="text/css" href="styles.css" rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> 
-    <title>Melody Muse</title>
         <div id="forum-container">
                 
             <form onsubmit="postMessage(event)">
@@ -32,12 +26,12 @@
                 <input type="submit" value="Post Message">
             </form>
             <h2>Messages</h2>
-            <!-- Display posted messages -->
         </div>
         <div id="messages-container">
             <p class="default-message"></pclass><strong>Hana &#127775;:</strong> Hi, welcome to the forum!</p>
             <div id="messages"></div>
         </div>
+        
         <script>
             function postMessage(event) 
             {
@@ -64,38 +58,23 @@
                           .replace(/'/g, "&#39;");
             }
         </script> 
-        </div>
         <footer>
-                <div id="playing">
-                    <img src="/images/beyonce.jpeg" alt="Beyonce - 4" id="coverart">
-                    <div id="songinfo">Run The World (Girls)<br><br>Beyonce</div>
+            <div id="playing">
+                <img src="/images/beyonce.jpeg" alt="Beyonce - 4" id="coverart">
+                <div id="songinfo">Run The World (Girls)<br><br>Beyonce</div>
+            </div>
+            <div id=soundbar>
+                <div id="buttons">
+                    <img src="/images/skipleft.png" alt="MELODY MUSE LOGO" id="lskip">
+                    <img src="/images/playbutton.png" alt="MELODY MUSE LOGO" id="playbutton">
+                    <img src="/images/skipright.png" alt="MELODY MUSE LOGO" id="rskip">
                 </div>
-                <div id=soundbar>
-                    <div id="buttons">
-                        <img src="/images/skipleft.png" alt="MELODY MUSE LOGO" id="lskip">
-                        <img src="/images/playbutton.png" alt="MELODY MUSE LOGO" id="playbutton">
-                        <img src="/images/skipright.png" alt="MELODY MUSE LOGO" id="rskip">
-                    </div>
-                    <div id="timeline">
-                        <div id="playhead"></div>
-                        <div id="timeelapse">1:52</div>
-                        <div id="timeremain">3:42</div>
-                    </div>
+                <div id="timeline">
+                    <div id="playhead"></div>
+                    <div id="timeelapse">1:52</div>
+                    <div id="timeremain">3:42</div>
+                </div>
             </div>
         </footer>
-        </div>
-        <footer>
-        </footer>
-        <div id="timeline">
-            <div id="playline"></div>
-            <div id="playhead"></div>
-        </div>
-        </div>
-        <footer>
-        </footer>
-        <div id="timeline">
-            <div id="playline"></div>
-            <div id="playhead"></div>
-        </div>
     </body>
 </html>
