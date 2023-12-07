@@ -1,0 +1,497 @@
+#overlay {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:#fff;
+    opacity:0.6;
+    z-index: 1000;
+    display: none;
+}
+
+#signinform 
+{
+    position:fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgb(74, 11, 11);
+    text-align: center;
+}
+
+#signinform h1 {
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+    color: white;
+}
+
+#signinform input
+{
+    border-style: solid;
+    width: 350px;
+    border-radius: 20px;
+    border-width: 4px;
+    border-color: black;
+}
+
+#signinform label {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 30px;
+    color: white;
+}
+
+#cancel {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 16px;
+    width: 350px;
+    height: 80px;
+    background-color: red;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: "Arial Rounded MT Bold";
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+#enter {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 80px;
+    background-color: rgb(49, 236, 49);
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: "Arial Rounded MT Bold";
+    cursor: pointer;
+}
+
+
+body {
+    background-color: rgb(196, 183, 183);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    flex: 1; /* Allow the wrapper to grow and take remaining space */
+}
+
+#content {
+    width: calc(100% - 236px);
+    background-color: rgb(74, 11, 11);
+    border-radius: 20px;
+    height: calc(100% - 348px);
+    margin-top: 184px;
+    margin-left: 224px;
+    display: flex;
+    justify-content: space-between; /* this will add equal space between each image */
+    overflow: hidden;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 8px;
+    color: rgb(255, 255, 255);
+    font-family: "Arial Rounded MT Bold";  
+    font-size: 16px;
+}
+
+figure {
+    text-align: center;
+}
+
+#contenttitle {
+    color: rgb(196, 183, 183);
+    font-family: "Arial Rounded MT Bold";  
+    font-size: 20px;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+#content img {
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/*Footer Control Bar*/
+footer {
+    width: calc(100% - 24px);
+    background-color: rgb(74, 11, 11);
+    height: 140px;
+    border-radius: 20px;
+    margin: 12px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+#playing{
+width: 25%;
+}
+
+#soundbar{
+    width: 75%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lskip {margin-top: 20px; margin-right: 10%; width: 40px; height: 40px; cursor: pointer;}
+#rskip {margin-top: 20px; margin-left: 10%; width: 40px; height: 40px; cursor: pointer;}
+#playbutton {margin-top: 20px;  width: 60px; height: 60px; cursor: pointer;}
+
+#timeline{
+    position: absolute;
+    background-color: white;
+    height: 10px;
+    width: 60%;
+    border-radius: 10px;
+    bottom: 20px;
+    left: 62.5%; /* Adjust the left position to 40% to center within the right 60% */
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+#playhead{
+    height: 16px;
+    width: 16px;
+    background-color: rgb(196, 183, 183);
+    border-radius: 16px;
+    margin-left: 45%;
+}
+
+#timeelapse{color: white; position: absolute; font-family: "Arial Rounded MT Bold"; left: -50px;}
+#timeremain{color: white; position: absolute; font-family: "Arial Rounded MT Bold"; right: -50px;}
+
+#playing{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#songinfo{
+    color: white;
+    font-family: "Arial Rounded MT Bold";  
+    font-size: 16px;
+    margin-left: calc(10% + 30px);
+    margin-right: auto;
+}
+
+#coverart{
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-left: 10%;
+}
+
+/*Side Navigation Bar*/
+#sidebar {
+    background-color: rgb(74, 11, 11);
+    width: 200px;
+    height: calc(100% - 36px - 140px);
+    border-radius: 20px;
+    margin: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+   }
+
+#sidebar img {
+    padding-top: 20px;
+    max-width: 75%;
+    max-height: 75%;
+    width: auto;
+    height: auto;
+}
+
+/*Explore Button*/
+#ex {
+    padding: 15px 10px 15px 10px;
+    margin: 12px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 20px;
+    color: rgb(74, 11, 11);
+    border-radius: 20px;
+    background-color: rgb(196, 183, 183);
+    cursor: pointer;
+}
+#ex:hover {
+    background-color: rgba(255, 255, 255);
+    color: rgb(74, 11, 11);
+}
+
+/*Forum Button*/
+#fo {
+    padding: 15px 10px 15px 10px;
+    margin: 12px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 20px;
+    color: rgb(74, 11, 11);
+    border-radius: 20px;
+    background-color: rgb(196, 183, 183);
+    cursor: pointer;
+}
+#fo:hover {
+    background-color: rgba(255, 255, 255);
+    color: rgb(74, 11, 11);
+}
+
+/*Profile Button*/
+#pr {
+    padding: 15px 10px 15px 10px;
+    margin: 12px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 20px;
+    color: rgb(74, 11, 11);
+    border-radius: 20px;
+    background-color: rgb(196, 183, 183);
+    cursor: pointer;
+}
+#pr:hover {
+    background-color: rgba(255, 255, 255);
+    color: rgb(74, 11, 11);
+}
+
+/*Sign Up Button*/
+#signup {
+    padding: 15px 10px 15px 10px;
+    margin: 12px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 20px;
+    color: rgb(74, 11, 11);
+    border-radius: 20px;
+    background-color: rgb(196, 183, 183);
+    cursor: pointer;
+}
+#signup:hover {
+    background-color: rgba(255, 255, 255);
+    color: rgb(74, 11, 11);
+}
+
+#pagehead {
+    font-family: "Arial Rounded MT Bold";
+    color: rgb(74, 11, 11);;
+    font-size: 80px;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 224px;
+}
+
+#search {
+    position: absolute;
+    height: 46px;
+    width: calc(100% - 236px);
+    margin-top: calc(80px + 48px);
+    margin-left: 224px;
+    border-radius: 20px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: 20px;
+    border-style: solid;
+    border-color: black;
+}
+
+/* Forum CSS */
+h2
+{
+    color:rgb(74, 11, 11);
+    margin-left:7px;
+}
+
+#forum-container 
+{
+    position: absolute;
+    width: calc(100% - 236px);
+    margin-top: calc(80px + 48px);
+    margin-left: 224px;
+    border-radius: 24px;
+    font-family: "Arial Rounded MT Bold";
+
+}
+
+#input-section 
+{
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#messages-section 
+{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form 
+{
+    margin-top: 10px;
+}
+
+label 
+{
+    font-family: "Arial Rounded MT Bold";
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea 
+{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] 
+{
+    background-color: rgb(73,11,11);
+    font-family: "Arial Rounded MT Bold";
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover 
+{
+    background-color: rgb(128, 11, 11);
+}
+
+#messages-container 
+{
+    background-color:rgb(73,11,11);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    width: calc(100% - 236px);
+    height: calc(100% - 580px);
+    margin-top: calc(80px + 336px);
+    margin-left: 224px;
+    overflow-y: auto;
+}
+
+#messages p {
+    margin-bottom: 10px;
+}
+
+.default-message {
+    font-family: "Arial Rounded MT Bold";
+    margin-left: 10px;
+}
+
+#messages
+{
+    color: white;
+    margin-left: 10px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+/* Profile CSS */
+
+h1
+{
+    margin-top: calc(80px + 48px);
+    margin-left: 230px;
+    font-family: "Arial Rounded MT Bold";
+    position: absolute;
+}
+
+h2
+{
+    margin-top: 0px;
+    margin-left: 0px;
+    font-family: "Arial Rounded MT Bold";
+    position: relative;
+}
+
+#profile-picture
+{
+    max-width: 160px;
+    max-height: 160px;
+    margin-top: calc(2px + 40px);
+    margin-left: 260px;
+    border-radius: 24px;
+    position: absolute;
+    z-index: 1;
+}
+
+p1
+{
+    color:white;
+    position: absolute;
+    z-index: 3;
+    top: 400px;
+    margin-left: 240px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+#profile-container 
+{
+    position: absolute;
+    background-color:rgb(73,11,11);
+    color: white;
+    border-radius: 4px;
+    width: 230;
+    height: 442;
+    margin-left: 230px;
+    margin-bottom: calc(442px- 140px);
+    border-radius: 24px;
+    overflow-y: auto
+}
+
+#playlist-container 
+{
+    margin-bottom: 10px;
+    background-color:rgb(73,11,11);
+    border-radius: 4px;
+    width: 930;
+    height: 442;
+    margin-left: 500px;
+    margin-top: 0px;
+    border-radius: 24px;
+    overflow-y: auto
+}
