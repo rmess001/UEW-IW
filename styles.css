@@ -440,7 +440,7 @@ h1
     position: absolute;
 }
 
-#playlist-text
+h2
 {
     margin-top: calc(80px + 40px);
     margin-left: 500px;
@@ -453,7 +453,7 @@ h1
     max-width: 160px;
     max-height: 160px;
     margin-top: calc(2px + 40px);
-    margin-left: 65px;
+    margin-left: 260px;
     border-radius: 24px;
     position: absolute;
     z-index: 1;
@@ -478,7 +478,6 @@ p1
     width: 230;
     height: 442;
     margin-left: 230px;
-    margin-top: 165px;
     margin-bottom: calc(442px- 140px);
     border-radius: 24px;
     overflow-y: auto
@@ -492,7 +491,176 @@ p1
     width: 930;
     height: 442;
     margin-left: 500px;
-    margin-top: -11px;
+    margin-top: 0px;
     border-radius: 24px;
     overflow-y: auto
 }
+
+/* Forum CSS */
+
+h2
+{
+    color:rgb(74, 11, 11);
+    margin-left:7px;
+}
+
+#forum-container 
+{
+    position: absolute;
+    width: calc(100% - 248px);
+    margin-top: calc(80px + 48px);
+    margin-left: 224px;
+    border-radius: 24px;
+    font-family: "Arial Rounded MT Bold";
+
+}
+
+#input-section 
+{
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#messages-section 
+{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form 
+{
+    margin-top: 10px;
+}
+
+label 
+{
+    font-family: "Arial Rounded MT Bold";
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea 
+{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] 
+{
+    background-color: rgb(73,11,11);
+    font-family: "Arial Rounded MT Bold";
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+}
+
+input[type="submit"]:hover 
+{
+    background-color: rgb(128, 11, 11);
+}
+
+#messages-container 
+{
+    margin-bottom: 10px;
+    background-color:rgb(73,11,11);
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+    width: calc(100% - 248px);
+    height: calc(100% - 580px);
+    max-height: calc(100% - 580px);
+    margin-top: calc(80px + 330px);
+    margin-left: 224px;
+    border-radius: 24px;
+    overflow-y: auto
+}
+
+#messages p 
+{
+    margin-bottom: 10px;
+}
+
+.default-message 
+{
+    font-family: "Arial Rounded MT Bold";
+    margin-left: 10px;
+}
+
+#messages
+{
+    color: white;
+    margin-left: 10px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+/* Profile CSS */
+
+h1
+{
+    margin-top: calc(80px + 48px);
+    margin-left: 230px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+.playlist
+{
+    margin-top: calc(80px + 48px);
+    margin-left: calc(40%);
+    font-family: "Arial Rounded MT Bold";
+}
+
+#profile-picture
+{
+    max-width: 160px;
+    max-height: 160px;
+    border-radius: 24px;
+    margin-left: 25%;
+}
+
+.p1
+{
+    color:white;
+    z-index: 3;
+    top: 400px;
+    margin-left: 240px;
+    font-family: "Arial Rounded MT Bold";
+}
+
+#profile-container 
+{
+    margin-bottom: 1%;
+    background-color: rgb(73, 11, 11);
+    border-radius: 4px;
+    width: 280px;
+    height: 460px;
+    margin-top: 170px;
+    margin-left: 224px;
+    border-radius: 24px;
+    overflow-y: auto;
+}
+
+#playlist-container 
+{
+    margin-bottom: 1%;
+    background-color: rgb(73, 11, 11);
+    border-radius: 4px;
+    width: calc(100% - 528px);
+    height: 460px;
+    margin-left: 516px;
+    margin-top: 170px;
+    border-radius: 24px;
+    overflow-y: auto;
+}
+
