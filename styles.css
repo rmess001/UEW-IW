@@ -184,7 +184,7 @@ z-index: 20;
     position: absolute;
     background-color: white;
     height: 10px;
-    width: 60%;
+    width: 50%;
     border-radius: 10px;
     bottom: 20px;
     left: 62.5%; /* Adjust the left position to 40% to center within the right 60% */
