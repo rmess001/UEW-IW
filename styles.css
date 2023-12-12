@@ -161,6 +161,7 @@ footer {
 
 #playing{
 width: 25%;
+z-index: 20;
 }
 
 #soundbar{
