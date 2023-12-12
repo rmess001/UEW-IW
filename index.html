@@ -1,0 +1,88 @@
+<html> 
+    <head>
+    </head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/UEW-IW/images/favicon.ico"> 
+    <title>Melody Muse</title>
+    <body>
+            <div id="overlay"></div>
+                <div id="signinform">
+                    <h1>Sign In</h1>
+                    <label for="email">Email: </label>
+                    <input type="Text" id="Email">
+
+                    <label for="password">Password:</label>
+                    <input type="Text" id="Password">
+                    <div id="enter" onclick="off()">Sign In</div>
+                    <div id="cancel" onclick="off()">Cancel</div>
+                </div>
+            <div class="wrapper">
+            <heading id="pagehead">Explore</heading>
+
+
+
+           <input type="text" placeholder="  Search..." id="search">
+           <div id="content">
+            <h1 id="contenttitle">Suggested Albums</h1>
+                    <figure>
+                        <img src="/UEW-IW/images/ST.jpeg" alt="You Will Never Know Why">
+                        <figcaption>You Will Never Know Why</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/UEW-IW/images/BJM.jpeg" alt="Bravery, Repetition and Noise">
+                        <figcaption>Bravery, Repetition and Noise</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/UEW-IW/images/TB.jpeg" alt="Tender Buttons">
+                        <figcaption>Tender Buttons</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/UEW-IW/images/FR.png" alt="Finally Rich">
+                        <figcaption>Finally Rich</figcaption>
+                    </figure>
+           </div>
+
+
+
+
+           
+            <div id="sidebar">
+                <img src="/UEW-IW/images/MELODYMUSE.png" alt="MELODY MUSE LOGO">
+                <a href="/UEW-IW/index.html"><div id="ex">Explore</div></a>
+                <a href="/UEW-IW/forum.html"><div id="fo">Forum</div></a>
+                <a href="/UEW-IW/profile.html"><div id="pr">Profile</div></a>
+                <div id="signup" onclick="openForm()">Sign In</div>
+            </div>
+        </div>
+        <script>
+            function openForm() {
+                document.getElementById("overlay").style.display = "block";
+                document.getElementById("signinform").style.display = "block";
+            }
+
+            function off() {
+            document.getElementById("overlay").style.display = "none";
+                document.getElementById("signinform").style.display = "none";
+            }
+        </script>
+        <footer>
+                <div id="playing">
+                    <img src="/UEW-IW/images/beyonce.jpeg" alt="Beyonce - 4" id="coverart">
+                    <div id="songinfo">Run The World (Girls)<br><br>Beyonce</div>
+                </div>
+                <div id=soundbar>
+                    <div id="buttons">
+                        <img src="/UEW-IW/images/skipleft.png" alt="MELODY MUSE LOGO" id="lskip">
+                        <img src="/UEW-IW/images/playbutton.png" alt="MELODY MUSE LOGO" id="playbutton">
+                        <img src="/UEW-IW/images/skipright.png" alt="MELODY MUSE LOGO" id="rskip">
+                    </div>
+                    <div id="timeline">
+                        <div id="playhead"></div>
+                        <div id="timeelapse">1:52</div>
+                        <div id="timeremain">3:42</div>
+                    </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
