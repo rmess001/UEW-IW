@@ -1,0 +1,75 @@
+<html> 
+    <head>
+    </head>
+    <link rel="stylesheet" type="text/css" href="styles.css" rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> 
+    <title>Melody Muse</title>
+    <body>
+            <div id="overlay"></div>
+                <div id="signinform">
+                    <h1>Sign In</h1>
+                    <label for="email">Email: </label>
+                    <input type="Text" id="Email">
+
+                    <label for="password">Password:</label>
+                    <input type="Text" id="Password">
+                    <div id="enter" onclick="off()">Sign In</div>
+                    <div id="cancel" onclick="off()">Cancel</div>
+                </div>
+            <div class="wrapper">
+            <heading id="pagehead">Explore</heading>
+
+            <h1> @xyz </h1>
+            <div id="profile-container">
+                <img src="/profileimage.png" alt="Profile picture" id="profile-picture">
+            </div>
+            <h1 id="playlist-text">My Playlists</h1>
+            <div id="playlist-container">
+                <iframe id="playlist-one" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5ABHKGoOzxkaa28ttQV9sE?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe id="playlist-one" style="border-radius:12px" src="https://open.spotify.com/embed/album/5j0o3XQ1YciVzm7MtcFmfG?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div>
+                <p1> This is my profile </p1>
+            </div>
+
+        </div>
+        <div id="sidebar">
+            <img src="/images/MELODYMUSE.png" alt="MELODY MUSE LOGO">
+            <a href="/UEW-IW/index.html"><div id="ex">Explore</div></a>
+            <a href="/UEW-IW/forum.html"><div id="fo">Forum</div></a>
+            <a href="/UEW-IW/profile.html"><div id="pr">Profile</div></a>
+            <div id="signup" onclick="openForm()">Sign Up</div>
+        </div>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("signinform").style.display = "block";
+        }
+
+        function off() {
+        document.getElementById("overlay").style.display = "none";
+            document.getElementById("signinform").style.display = "none";
+        }
+    </script>
+    <footer>
+            <div id="playing">
+                <img src="/images/beyonce.jpeg" alt="Beyonce - 4" id="coverart">
+                <div id="songinfo">Run The World (Girls)<br><br>Beyonce</div>
+            </div>
+            <div id=soundbar>
+                <div id="buttons">
+                    <img src="/images/skipleft.png" alt="MELODY MUSE LOGO" id="lskip">
+                    <img src="/images/playbutton.png" alt="MELODY MUSE LOGO" id="playbutton">
+                    <img src="/images/skipright.png" alt="MELODY MUSE LOGO" id="rskip">
+                </div>
+                <div id="timeline">
+                    <div id="playhead"></div>
+                    <div id="timeelapse">1:52</div>
+                    <div id="timeremain">3:42</div>
+                </div>
+        </div>
+    </footer>
+
+</body>
+</html>
