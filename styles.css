@@ -269,7 +269,6 @@ footer {
 }
 
 #songtitle{
-    position: fixed;
     width: 10%;
     height: 120px;
     position: fixed;
@@ -394,7 +393,7 @@ footer {
 
 #pagehead {
     font-family: "Arial Rounded MT Bold";
-    color: rgb(74, 11, 11);;
+    color: rgb(74, 11, 11);
     font-size: 80px;
     position: absolute;
     margin-top: 12px;
