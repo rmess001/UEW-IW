@@ -1,0 +1,94 @@
+<html> 
+    <head>
+    </head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/UEW-IW/images/favicon.ico"> 
+    <title>Melody Muse</title>
+    <body>
+            <div id="overlay"></div>
+                <div id="signinform">
+                    <h1>Sign In</h1>
+                    <label for="email">Email: </label>
+                    <input type="Text" id="Email">
+                    <label for="password">Password:</label>
+                    <input type="Text" id="Password">
+                    <div id="enter" onclick="off()">Sign In</div>
+                    <div id="cancel" onclick="off()">Cancel</div>
+                </div>
+            <div class="wrapper">
+            <heading id="pagehead">Explore</heading>
+
+
+
+           <input type="text" placeholder="  Search..." id="search">
+           <div id="content">
+            <h1 id="contenttitle">Suggested Albums</h1>
+                    <figure>
+                        <img src="/UEW-IW/images/ST.jpeg" alt="You Will Never Know Why" title="You Will Never Know Why">
+                        <figcaption>You Will Never Know Why</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/UEW-IW/images/BJM.jpeg" alt="Bravery, Repetition and Noise" title="Bravery, Repetition and Noise">
+                        <figcaption>Bravery, Repetition and Noise</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/UEW-IW/images/TB.jpeg" alt="Tender Buttons" title="Tender Buttons">
+                        <figcaption>Tender Buttons</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/UEW-IW/images/FR.png" alt="Finally Rich" title="Finally Rich">
+                        <figcaption>Finally Rich</figcaption>
+                    </figure>
+           </div>
+
+
+
+
+           
+            <div id="sidebar">
+                <img src="/UEW-IW/images/MELODYMUSE.png" alt="MELODY MUSE LOGO" title="MELODY MUSE LOGO">
+                <a href="/UEW-IW/index.html"><div id="ex">Explore</div></a>
+                <a href="/UEW-IW/forum.html"><div id="fo">Forum</div></a>
+                <a href="/UEW-IW/profile.html"><div id="pr">Profile</div></a>
+                <div id="signup" onclick="openForm()">Sign In</div>
+                <div id="lyrics">
+                    <h1>Lyrics:</h1>
+                    <p>"Who run the world? Girls (girls)<br>
+                        Who run the world? Girls (girls)"</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function openForm() {
+                document.getElementById("overlay").style.display = "block";
+                document.getElementById("signinform").style.display = "block";
+            }
+
+            function off() {
+            document.getElementById("overlay").style.display = "none";
+                document.getElementById("signinform").style.display = "none";
+            }
+        </script>
+        <footer>
+                    <img src="/UEW-IW/images/beyonce.jpeg" alt="Beyonce - 4" title="Beyonce - 4" id="coverart">
+                    <div id="songtitle">
+                        <p>Run The World (Girls)<br><br>Beyonce</p>
+                    </div>
+                    <div id="buttons">
+                        <img src="/UEW-IW/images/skipleft.png" alt="backward" alt="backward" id="lskip">
+                        <img src="/UEW-IW/images/playbutton.png" alt="pause/play" id="playbutton">
+                        <img src="/UEW-IW/images/skipright.png" alt="forward" id="rskip">
+                    </div>
+                        <div id="timeline">
+                            <div id="playhead"></div>
+                        </div>
+                        <div id="volume">
+                            <h1>Volume</h1>
+                            <div id="volumehead"></div>
+                        </div>
+                        <div id="timeelapse">1:52</div>
+                        <div id="timeremain">3:42</div>
+        </footer>
+
+    </body>
+</html>

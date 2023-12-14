@@ -1,0 +1,126 @@
+<html> 
+    <head>
+    </head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <title>Melody Muse</title>
+    <body>
+        <div id="overlay"></div>
+                <div id="signinform">
+                    <h1>Sign In</h1>
+                    <label for="email">Email: </label>
+                    <input type="Text" id="Email">
+
+                    <label for="password">Password:</label>
+                    <input type="Text" id="Password">
+                    <div id="enter" onclick="off()">Sign In</div>
+                    <div id="cancel" onclick="off()">Cancel</div>
+                </div>
+        <div class="wrapper">
+
+
+
+            <heading id="pagehead">Forum</heading>
+            <div id="forum-container">
+                
+            <form onsubmit="postMessage(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" required></textarea>
+                <br>
+                <input type="submit" value="Post Message">
+            </form>
+            <h2>Messages</h2>
+        </div>
+        <div id="messages-container">
+            <p class="default-message"></pclass><strong>Hana &#127775;:</strong> Hi, welcome to the forum!</p>
+            <div id="messages"></div>
+        </div>
+        
+        <script>
+            function postMessage(event) 
+            {
+                event.preventDefault();
+        
+                var username = document.getElementById("username").value;
+                var message = document.getElementById("message").value;
+        
+                var messagesContainer = document.getElementById("messages");
+                var messageElement = document.createElement("p");
+                messageElement.innerHTML = "<strong>" + escapeHTML(username) + ":</strong> " + escapeHTML(message);
+                messagesContainer.appendChild(messageElement);
+        
+                // Clear the form
+                document.getElementById("username").value = "";
+                document.getElementById("message").value = "";
+            }
+            function escapeHTML(str) 
+            {
+                return str.replace(/&/g, "&amp;")
+                          .replace(/</g, "&lt;")
+                          .replace(/>/g, "&gt;")
+                          .replace(/"/g, "&quot;")
+                          .replace(/'/g, "&#39;");
+            }
+            function openForm() {
+                document.getElementById("overlay").style.display = "block";
+                document.getElementById("signinform").style.display = "block";
+            }
+
+            function off() {
+            document.getElementById("overlay").style.display = "none";
+                document.getElementById("signinform").style.display = "none";
+            }
+        </script>
+
+        
+        
+<div id="sidebar">
+    <img src="/UEW-IW/images/MELODYMUSE.png" alt="MELODY MUSE LOGO" title="MELODY MUSE LOGO">
+    <a href="/UEW-IW/index.html"><div id="ex">Explore</div></a>
+    <a href="/UEW-IW/forum.html"><div id="fo">Forum</div></a>
+    <a href="/UEW-IW/profile.html"><div id="pr">Profile</div></a>
+    <div id="signup" onclick="openForm()">Sign In</div>
+    <div id="lyrics">
+        <h1>Lyrics:</h1>
+        <p>"Who run the world? Girls (girls)<br>
+            Who run the world? Girls (girls)"</p>
+    </div>
+</div>
+</div>
+<script>
+function openForm() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("signinform").style.display = "block";
+}
+
+function off() {
+document.getElementById("overlay").style.display = "none";
+    document.getElementById("signinform").style.display = "none";
+}
+</script>
+<footer>
+        <img src="/UEW-IW/images/beyonce.jpeg" alt="Beyonce - 4" title="Beyonce - 4" id="coverart">
+        <div id="songtitle">
+            <p>Run The World (Girls)<br><br>Beyonce</p>
+        </div>
+        <div id="buttons">
+            <img src="/UEW-IW/images/skipleft.png" alt="backward" id="lskip">
+            <img src="/UEW-IW/images/playbutton.png" alt="pause/play" id="playbutton">
+            <img src="/UEW-IW/images/skipright.png" alt="forward" id="rskip">
+        </div>
+            <div id="timeline">
+                <div id="playhead"></div>
+            </div>
+            <div id="volume">
+                <h1>Volume</h1>
+                <div id="volumehead"></div>
+            </div>
+            <div id="timeelapse">1:52</div>
+            <div id="timeremain">3:42</div>
+</footer>
+
+</body>
+</html>
